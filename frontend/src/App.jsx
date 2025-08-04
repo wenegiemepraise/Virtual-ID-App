@@ -1,0 +1,21 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Account from './pages/Account';
+import IDScanner from './components/IDScanner';
+
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/account" element={<Account />} />
+          <Route path="/scan-id" element={<IDScanner />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+}
+
+export default App;
