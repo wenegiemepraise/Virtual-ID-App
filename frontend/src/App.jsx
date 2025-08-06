@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Account from './pages/Account';
 import IDScanner from './components/IDScanner';
+import Register from './pages/Register';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/account" element={<Account />} />
           <Route path="/scan-id" element={<IDScanner />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </div>
     </Router>
