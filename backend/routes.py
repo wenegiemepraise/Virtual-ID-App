@@ -1,6 +1,5 @@
 from flask import Blueprint, request, jsonify
 from models import User, IDInfo, db
-from werkzeug.security import check_password_hash
 
 routes = Blueprint('routes', __name__)
 
@@ -13,8 +12,8 @@ def register():
     if not username or not password:
         return jsonify({'message': 'Username and password are required'}), 400
     
-    new_user = User(username=username)
-    new_user.set_password(password)
+    new_user = User(username=username, id_image=b'')
+    new_user.set_password(password)  # Use the model's password hashing method
     
     db.session.add(new_user)
     db.session.commit()
