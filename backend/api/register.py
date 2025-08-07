@@ -17,8 +17,14 @@ def register():
         return jsonify({'message': 'Username already exists.'}), 409
 
     hashed_password = generate_password_hash(password)
-    new_user = User(username=username, password=hashed_password)
+    # Create user with empty id_image for now (will be updated later)
+    new_user = User(username=username, password_hash=hashed_password, id_image=b'')
     db.session.add(new_user)
     db.session.commit()
 
     return jsonify({'message': 'Account created successfully!'}), 201
+
+
+@register_bp.route('/')
+def hello():
+    return "Hello, World!"
