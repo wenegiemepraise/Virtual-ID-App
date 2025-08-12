@@ -15,4 +15,4 @@ with app.app_context():
     print("Database tables created successfully!")
     print("Models available:")
     print("- User: username, password_hash, id_image")
-    print("- IDInfo: user_id, id_type, id_number")
+    print("- IDInfo: user_id, id_type, id_number, id_image, raw_text, extracted_data, created_at, updated_at")

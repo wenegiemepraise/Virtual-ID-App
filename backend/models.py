@@ -23,6 +23,11 @@ class IDInfo(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     id_type = db.Column(db.String(50), nullable=False)
     id_number = db.Column(db.String(100), nullable=False)
+    id_image = db.Column(db.LargeBinary, nullable=True)  # Store the actual scanned image
+    raw_text = db.Column(db.Text, nullable=True)  # Store OCR raw text
+    extracted_data = db.Column(db.Text, nullable=True)  # Store JSON of extracted data
+    created_at = db.Column(db.DateTime, default=db.func.current_timestamp())
+    updated_at = db.Column(db.DateTime, default=db.func.current_timestamp(), onupdate=db.func.current_timestamp())
 
     user = db.relationship('User', backref=db.backref('ids', lazy=True))
 
