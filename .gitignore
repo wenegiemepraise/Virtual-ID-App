@@ -1,7 +1,5 @@
-frontend/node_modules/
-frontend/.cache/
-node_modules/
 node_modules/
 *.db
-*.pyc
 __pycache__/
+*.pyc
+.env
