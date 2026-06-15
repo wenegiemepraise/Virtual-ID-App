@@ -4,12 +4,6 @@ A modern, secure digital identity management application that allows users to st
 
 ## ✨ Features
 
-### 🔐 **Security First**
-- **Military-grade encryption** for all stored documents
-- **Secure authentication** with password hashing
-- **CORS protection** and secure API endpoints
-- **User session management** with localStorage
-
 ### 📱 **Modern UI/UX**
 - **Beautiful shadcn/ui components** with Tailwind CSS
 - **Responsive design** that works on all devices
@@ -189,5 +183,3 @@ class IDInfo(db.Model):
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
-
-**Built with ❤️ using modern web technologies for secure digital identity management.**
